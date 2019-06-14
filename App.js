@@ -1,6 +1,21 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View, ListView } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import { createStackNavigator, createAppContainer } from "react-navigation";
+import Home from "./components/Home";
+import Tech from "./components/Tech";
+
+const RootStack = createStackNavigator(
+  {
+    Home,
+    Tech
+  },
+  {
+    initialRouteName: "Home"
+  }
+);
+
+const appCont = createAppContainer(RootStack);
 
 export default class App extends Component {
   render() {
@@ -9,7 +24,7 @@ export default class App extends Component {
         <View style={styles.iconCont}>
           <View style={styles.first}>
             <Icon name="ios-home" color="gray" size={20} />
-            <Text> Home</Text>
+            <Text> Home </Text>
           </View>
           <View style={styles.single}>
             <Icon name="ios-wifi" color="gray" size={20} />
