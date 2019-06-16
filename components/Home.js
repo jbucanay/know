@@ -6,6 +6,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text>Hit</Text>
         <View style={styles.iconCont}>
           <View style={styles.first}>
             <Icon name="ios-home" color="gray" size={20} />
