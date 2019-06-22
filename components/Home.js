@@ -6,6 +6,7 @@ export default class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text>Hit</Text>
         <View style={styles.iconCont}>
           <View style={styles.first}>
             <Icon name="ios-home" color="gray" size={20} />
@@ -21,7 +22,7 @@ export default class Home extends Component {
           </View>
           <View style={styles.single}>
             <Icon name="ios-globe" color="gray" size={20} />
-            <Text>Global</Text>
+            <Text>Sports</Text>
           </View>
           <View style={styles.single}>
             <Icon name="ios-trending-up" color="gray" size={20} />

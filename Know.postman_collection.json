@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "94a0ae52-bbda-4899-8298-2906db3121e9",
+		"name": "Know",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"item": [
+				{
+					"name": "all ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=i&apiKey=bc1119ab6a4c450fb7230c4c765ac97f",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "i"
+								},
+								{
+									"key": "apiKey",
+									"value": "bc1119ab6a4c450fb7230c4c765ac97f"
+								}
+							]
+						},
+						"description": "Returns all articles "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tech",
+			"item": [
+				{
+					"name": "Tech",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=tech&apiKey=bc1119ab6a4c450fb7230c4c765ac97f",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "tech"
+								},
+								{
+									"key": "apiKey",
+									"value": "bc1119ab6a4c450fb7230c4c765ac97f"
+								}
+							]
+						},
+						"description": "Returns all tech news "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "social",
+			"item": [
+				{
+					"name": "https://newsapi.org/v1/articles?source=associated-press&q=social&apiKey=bc1119ab6a4c450fb7230c4c765ac97f",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://newsapi.org/v1/articles?source=associated-press&q=social&apiKey=bc1119ab6a4c450fb7230c4c765ac97f",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v1",
+								"articles"
+							],
+							"query": [
+								{
+									"key": "source",
+									"value": "associated-press"
+								},
+								{
+									"key": "q",
+									"value": "social"
+								},
+								{
+									"key": "apiKey",
+									"value": "bc1119ab6a4c450fb7230c4c765ac97f"
+								}
+							]
+						},
+						"description": "Gets all social news "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sport",
+			"item": [
+				{
+					"name": "sport",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://newsapi.org/v2/everything?q=sport&apiKey=bc1119ab6a4c450fb7230c4c765ac97f",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"everything"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "sport"
+								},
+								{
+									"key": "apiKey",
+									"value": "bc1119ab6a4c450fb7230c4c765ac97f"
+								}
+							]
+						},
+						"description": "sport news"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "trending",
+			"item": [
+				{
+					"name": "trending ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://newsapi.org/v2/top-headlines?country=us&apiKey=bc1119ab6a4c450fb7230c4c765ac97f",
+							"protocol": "https",
+							"host": [
+								"newsapi",
+								"org"
+							],
+							"path": [
+								"v2",
+								"top-headlines"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "us"
+								},
+								{
+									"key": "apiKey",
+									"value": "bc1119ab6a4c450fb7230c4c765ac97f"
+								}
+							]
+						},
+						"description": "trending news in the us"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
