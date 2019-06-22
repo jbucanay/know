@@ -1,12 +1,27 @@
 import React, { Component } from "react";
 import { Text, StyleSheet, View } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import http from "../http/getAll";
+import HomeView from "./HomeView";
 
 export default class Home extends Component {
+  state = {
+    data: []
+  };
+
+  async componentDidMount() {
+    let data = await http.getData();
+    this.setState({ data });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hit</Text>
+        <HomeView>
+          {this.state.data.map((news, index) => {
+            return news;
+          })}
+        </HomeView>
         <View style={styles.iconCont}>
           <View style={styles.first}>
             <Icon name="ios-home" color="gray" size={20} />
