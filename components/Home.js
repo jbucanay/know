@@ -22,7 +22,7 @@ export default class Home extends Component {
           </View>
           <View style={styles.single}>
             <Icon name="ios-globe" color="gray" size={20} />
-            <Text>Global</Text>
+            <Text>Sports</Text>
           </View>
           <View style={styles.single}>
             <Icon name="ios-trending-up" color="gray" size={20} />
