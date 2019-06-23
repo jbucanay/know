@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Home from "./components/Home";
 import Tech from "./components/Tech";
+<<<<<<< HEAD
 import Icon from "react-native-vector-icons/Ionicons";
 import { NativeRouter, Route, Link } from "react-router-native";
 
@@ -41,6 +42,23 @@ export default class App extends Component {
         </View>
       </NativeRouter>
     );
+=======
+
+const RootStack = createStackNavigator(
+  {
+    Land: Home
+  },
+  {
+    initialRouteName: "Land"
+  }
+);
+
+const AppCont = createAppContainer(RootStack);
+
+export default class App extends Component {
+  render() {
+    return <AppCont />;
+>>>>>>> master
   }
 }
 
