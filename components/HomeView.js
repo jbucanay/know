@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { View, Text, StyleSheet, Image } from "react-native";
+import AllHome from "./AllHome";
 
 /// responsibility: show home news
 
@@ -10,7 +11,6 @@ export default class HomeView extends Component {
       const one = this.props.children[0];
       const date = new Date(one.publishedAt);
       const newsDate = date.toString().slice(0, 10);
-      console.log(one);
       return (
         <View style={styles.parent}>
           <View style={styles.imgCont}>
@@ -18,9 +18,14 @@ export default class HomeView extends Component {
             <Text style={styles.credit}>{one.author}</Text>
           </View>
           <View style={styles.descCont}>
-            <Text>{one.title}</Text>
-            <Text>{one.description}</Text>
+            <Text style={styles.head}>{one.title}</Text>
+            <Text style={styles.desc}>{one.description}</Text>
             <Text style={styles.credit}>{newsDate}</Text>
+          </View>
+          <View>
+            {this.props.children.slice(1).map((item, index) => {
+              return <AllHome key={index} all={item} />;
+            })}
           </View>
         </View>
       );
@@ -33,7 +38,7 @@ export default class HomeView extends Component {
   }
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   img: {
     width: 375,
     height: 200
@@ -53,9 +58,16 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     justifyContent: "space-between",
-    flex: 0.3
+    flex: 0.29
   },
   parent: {
     flex: 2
+  },
+  head: {
+    fontWeight: "900",
+    fontSize: 16
+  },
+  desc: {
+    fontWeight: "400"
   }
 });
