@@ -4,18 +4,28 @@ import { styles } from "./HomeView";
 
 export default function AllHome(props) {
   console.log(props.all);
+  const ccDate = new Date(props.all.publishedAt);
+  const time = ccDate.toString().slice(0, 10);
+  console.log(time);
   return (
-    //     <View style={styles.parent}>
-    <View style={styles.imgCont}>
-      <Image source={{ uri: props.all.urlToImage }} style={styles.img} />
-      <Text style={styles.credit}>{props.all.author}</Text>
+    <View style={cc.top}>
+      <View>
+        <Text style={styles.head}>{props.all.title}</Text>
+        <Text style={styles.credit}>{time}</Text>
+      </View>
+      <Image source={{ uri: props.all.urlToImage }} style={cc.img} />
     </View>
-    //     <View style={styles.descCont}>
-    //       <Text style={styles.head}>{one.title}</Text>
-    //       <Text style={styles.desc}>{one.description}</Text>
-    //       <Text style={styles.credit}>{newsDate}</Text>
-    //     </View>
-    //     <AllHome all={this.props.children.slice(1)} />
-    //   </View>
   );
 }
+
+const cc = StyleSheet.create({
+  top: {
+    flexDirection: "row",
+    width: 300,
+    justifyContent: "space-between"
+  },
+  img: {
+    width: 100,
+    height: 100
+  }
+});

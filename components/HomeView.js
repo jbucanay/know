@@ -58,16 +58,16 @@ export const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     justifyContent: "space-between",
-    flex: 0.29
+    flex: 1
   },
   parent: {
     flex: 2
   },
   head: {
-    fontWeight: "900",
+    fontWeight: "600",
     fontSize: 16
   },
   desc: {
-    fontWeight: "400"
+    fontWeight: "200"
   }
 });
