@@ -6,8 +6,7 @@ import Tech from "./components/Tech";
 
 const RootStack = createStackNavigator(
   {
-    Land: Home,
-    Technology: Tech
+    Land: Home
   },
   {
     initialRouteName: "Land"
@@ -18,10 +17,6 @@ const AppCont = createAppContainer(RootStack);
 
 export default class App extends Component {
   render() {
-    return (
-      <AppCont>
-        <Home />
-      </AppCont>
-    );
+    return <AppCont />;
   }
 }
