@@ -1,22 +1,17 @@
 import React, { Component } from "react";
-import { View } from "react-native";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { View, Text } from "react-native";
 import Home from "./components/Home";
 import Tech from "./components/Tech";
-
-const RootStack = createStackNavigator(
-  {
-    Land: Home
-  },
-  {
-    initialRouteName: "Land"
-  }
-);
-
-const AppCont = createAppContainer(RootStack);
+import { NativeRouter, Route, Link } from "react-router-native";
 
 export default class App extends Component {
   render() {
-    return <AppCont />;
+    return (
+      <NativeRouter>
+        <Text>Hit</Text>
+        <Route exact path="/home" component={Home} />
+        <Route path="/tech" component={Tech} />
+      </NativeRouter>
+    );
   }
 }
