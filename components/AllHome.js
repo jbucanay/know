@@ -2,10 +2,9 @@ import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
 
 export default function AllHome(props) {
-  console.log(props.all);
   const ccDate = new Date(props.all.publishedAt);
   const time = ccDate.toString().slice(0, 10);
-  console.log(time);
+
   return (
     <View style={cc.top}>
       <View style={cc.desc}>

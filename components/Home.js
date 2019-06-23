@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, StyleSheet, View } from "react-native";
+import { Text, StyleSheet, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import http from "../http/getAll";
 import HomeView from "./HomeView";
@@ -27,10 +27,13 @@ export default class Home extends Component {
             <Icon name="ios-home" color="gray" size={20} />
             <Text> Home </Text>
           </View>
-          <View style={styles.single}>
+          <TouchableOpacity
+            style={styles.single}
+            onPress={() => this.props.navigation.navigate("Technology")}
+          >
             <Icon name="ios-wifi" color="gray" size={20} />
             <Text>Tech</Text>
-          </View>
+          </TouchableOpacity>
           <View style={styles.single}>
             <Icon name="ios-contacts" color="gray" size={20} />
             <Text>Social</Text>
