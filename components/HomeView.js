@@ -30,11 +30,7 @@ export default class HomeView extends Component {
         </ScrollView>
       );
     }
-    return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Text>Loading...</Text>;
   }
 }
 
