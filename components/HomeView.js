@@ -53,8 +53,9 @@ export const styles = StyleSheet.create({
   descCont: {
     paddingLeft: 20,
     paddingRight: 20,
-    justifyContent: "space-between",
-    flex: 1
+    justifyContent: "space-around",
+    flex: 1,
+    height: 120
   },
   parent: {
     flex: 2

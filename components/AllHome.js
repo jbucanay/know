@@ -8,8 +8,8 @@ export default function AllHome(props) {
   console.log(time);
   return (
     <View style={cc.top}>
-      <View style={cc.title}>
-        <Text>{props.all.title}</Text>
+      <View style={cc.desc}>
+        <Text style={cc.title}>{props.all.title}</Text>
         <Text style={cc.time}>{time}</Text>
       </View>
       <Image source={{ uri: props.all.urlToImage }} style={cc.img} />
@@ -21,11 +21,15 @@ const cc = StyleSheet.create({
   top: {
     flex: 1,
     justifyContent: "space-around",
-    backgroundColor: "red",
     paddingLeft: 20,
     paddingRight: 20,
+    paddingBottom: 30,
+    paddingTop: 30,
     flexDirection: "row",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    borderColor: "grey",
+    borderStyle: "dashed",
+    borderWidth: 0.4
   },
   img: {
     width: 100,
@@ -35,12 +39,19 @@ const cc = StyleSheet.create({
   time: {
     fontWeight: "300",
     fontStyle: "italic",
-    fontSize: 10
+    fontSize: 10,
+    paddingTop: 10
   },
-  title: {
+  desc: {
     alignSelf: "flex-start",
     flexDirection: "column",
+    paddingRight: 2,
     flexWrap: "wrap",
-    flex: 0.6
+    flex: 1,
+    justifyContent: "space-between"
+  },
+  title: {
+    fontWeight: "600",
+    fontSize: 16
   }
 });
