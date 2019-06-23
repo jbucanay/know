@@ -30,11 +30,7 @@ export default class HomeView extends Component {
         </ScrollView>
       );
     }
-    return (
-      <View>
-        <Text>Loading...</Text>
-      </View>
-    );
+    return <Text>Loading...</Text>;
   }
 }
 
@@ -58,16 +54,17 @@ export const styles = StyleSheet.create({
     paddingLeft: 20,
     paddingRight: 20,
     justifyContent: "space-between",
-    flex: 0.29
+    flex: 2,
+    height: 160
   },
   parent: {
     flex: 2
   },
   head: {
-    fontWeight: "900",
+    fontWeight: "600",
     fontSize: 16
   },
   desc: {
-    fontWeight: "400"
+    fontWeight: "200"
   }
 });

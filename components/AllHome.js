@@ -1,21 +1,56 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from "react-native";
-import { styles } from "./HomeView";
 
 export default function AllHome(props) {
-  console.log(props.all);
+  const ccDate = new Date(props.all.publishedAt);
+  const time = ccDate.toString().slice(0, 10);
+
   return (
-    //     <View style={styles.parent}>
-    <View style={styles.imgCont}>
-      <Image source={{ uri: props.all.urlToImage }} style={styles.img} />
-      <Text style={styles.credit}>{props.all.author}</Text>
+    <View style={cc.top}>
+      <View style={cc.desc}>
+        <Text style={cc.title}>{props.all.title}</Text>
+        <Text style={cc.time}>{time}</Text>
+      </View>
+      <Image source={{ uri: props.all.urlToImage }} style={cc.img} />
     </View>
-    //     <View style={styles.descCont}>
-    //       <Text style={styles.head}>{one.title}</Text>
-    //       <Text style={styles.desc}>{one.description}</Text>
-    //       <Text style={styles.credit}>{newsDate}</Text>
-    //     </View>
-    //     <AllHome all={this.props.children.slice(1)} />
-    //   </View>
   );
 }
+
+const cc = StyleSheet.create({
+  top: {
+    flex: 1,
+    justifyContent: "space-around",
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 30,
+    paddingTop: 30,
+    flexDirection: "row",
+    alignItems: "flex-start",
+    borderColor: "grey",
+    borderStyle: "dashed",
+    borderWidth: 0.4
+  },
+  img: {
+    width: 100,
+    height: 100
+  },
+
+  time: {
+    fontWeight: "300",
+    fontStyle: "italic",
+    fontSize: 10,
+    paddingTop: 10
+  },
+  desc: {
+    alignSelf: "flex-start",
+    flexDirection: "column",
+    paddingRight: 2,
+    flexWrap: "wrap",
+    flex: 1,
+    justifyContent: "space-between"
+  },
+  title: {
+    fontWeight: "600",
+    fontSize: 16
+  }
+});
