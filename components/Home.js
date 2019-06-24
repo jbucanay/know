@@ -15,6 +15,7 @@ export default class Home extends Component {
   }
 
   render() {
+    ``;
     return (
       <View style={styles.container}>
         <HomeView>
@@ -29,7 +30,7 @@ export default class Home extends Component {
           </View>
           <TouchableOpacity
             style={styles.single}
-            onPress={() => this.props.navigation.navigate("Technology")}
+            onPress={() => this.props.navigation.navigate("Tech")}
           >
             <Icon name="ios-wifi" color="gray" size={20} />
             <Text>Tech</Text>

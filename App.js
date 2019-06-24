@@ -1,15 +1,26 @@
 import React, { Component } from "react";
-import { View } from "react-native";
-import { createStackNavigator, createAppContainer } from "react-navigation";
-import Home from "./components/Home";
 import Tech from "./components/Tech";
+import Home from "./components/Home";
+import { View, Text } from "react-native";
+import { createStackNavigator, createAppContainer } from "react-navigation";
 
 const RootStack = createStackNavigator(
   {
-    Land: Home
+    Home: {
+      screen: Home,
+      navigationOptions: {
+        title: "Home News"
+      }
+    },
+    Tech: {
+      screen: Tech,
+      navigationOptions: {
+        title: "Tech"
+      }
+    }
   },
   {
-    initialRouteName: "Land"
+    initialRouteName: "Home"
   }
 );
 

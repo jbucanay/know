@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { View, Text, StyleSheet, Image, ScrollView } from "react-native";
 import AllHome from "./AllHome";
 
-/// responsibility: show home news
-
 export default class HomeView extends Component {
   render() {
     if (this.props.children.length) {
