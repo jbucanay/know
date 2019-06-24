@@ -1,4 +1,8 @@
 import { Navigation } from "react-native-navigation";
 import Home from "./components/Home";
+import Tech from "./components/Tech";
 
-Navigation.registerComponent("landingNews.Home", () => Home);
+export function registerScreens() {
+  Navigation.registerComponent("Home", () => Home);
+  Navigation.registerComponent("Tech", () => Tech);
+}

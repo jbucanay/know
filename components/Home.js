@@ -3,8 +3,18 @@ import { Text, StyleSheet, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 import http from "../http/getAll";
 import HomeView from "./HomeView";
+import { Navigation } from "react-native-navigation";
 
 export default class Home extends Component {
+  static get options() {
+    return {
+      topBar: {
+        title: {
+          text: "Home"
+        }
+      }
+    };
+  }
   state = {
     data: []
   };
@@ -15,7 +25,7 @@ export default class Home extends Component {
   }
 
   render() {
-    ``;
+    console.log(this.props);
     return (
       <View style={styles.container}>
         <HomeView>
@@ -28,13 +38,13 @@ export default class Home extends Component {
             <Icon name="ios-home" color="gray" size={20} />
             <Text> Home </Text>
           </View>
-          <TouchableOpacity
+          <View
             style={styles.single}
             onPress={() => this.props.navigation.navigate("Tech")}
           >
             <Icon name="ios-wifi" color="gray" size={20} />
             <Text>Tech</Text>
-          </TouchableOpacity>
+          </View>
           <View style={styles.single}>
             <Icon name="ios-contacts" color="gray" size={20} />
             <Text>Social</Text>
